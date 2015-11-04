@@ -152,7 +152,7 @@ class ModuleRegistry(object):
             if template_data:
                 # Template data contains values that should be interpolated
                 # into the component definition
-                s = yaml.dump(component_data, default_flow_style=False)
+                s = yaml.dump(component_data)
                 allow_empty_variables = self.global_config \
                     and self.global_config.has_section('job_builder') \
                     and self.global_config.has_option(
